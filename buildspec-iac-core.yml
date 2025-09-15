@@ -24,7 +24,8 @@ phases:
       - terraform validate
       # Create a plan (saved as artifact for approvals)
       - terraform plan 
-      - terraform apply --auto-approve 
+      #- terraform apply --auto-approve 
+      - terraform destroy --auto-approve 
   post_build:
     commands:
       - echo "Done."
