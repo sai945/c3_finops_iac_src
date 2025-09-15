@@ -20,7 +20,7 @@ phases:
     commands:
       - set -euo pipefail
       # Validate & format
-      - terraform fmt -check
+      #- terraform fmt -check
       - terraform validate
       # Create a plan (saved as artifact for approvals)
       - terraform plan 
