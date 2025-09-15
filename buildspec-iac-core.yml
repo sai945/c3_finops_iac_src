@@ -1,17 +1,4 @@
 version: 0.2
-
-env:
-  shell: bash
-  variables:
-    TF_IN_AUTOMATION: "true"
-    TF_INPUT: "0"
-    # set ENVIRONMENT in the build environment or CodePipeline (dev|qa|prod)
-    ACTION: "plan"             # override to "apply" when needed
-  parameter-store:
-    # Optional: inject sensitive values as SSM params
-    TF_VAR_db_password: "/c3ops/dev/db_password"
-  exported-variables:
-    - PLAN_FILE
 phases:
   install:
     commands:
